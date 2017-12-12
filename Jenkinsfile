@@ -14,13 +14,13 @@ pipeline {
                 }
 
 	        }
-		   stage ('publish report') {
-		   steps {
-			   perfReport compareBuildPrevious: true, excludeResponseTime: true, modePerformancePerTestCase: true, modeThroughput: true, sourceDataFiles: '/usr/local/bin/*.jtl'
+	    // stage ('publish report') {
+		//   steps {
+		//	  perfReport compareBuildPrevious: true, excludeResponseTime: true, modePerformancePerTestCase: true, modeThroughput: true, sourceDataFiles: '/usr/local/bin/*.jtl'
 	    
-		        }		   
-		   }
-		   
+		  //      }		   
+		   // }
+	      
 		   stage ('build jmeter container') {
 			  steps {
 				  //sh ' /usr/local/bin/docker pull lazzurs/jmeter '
