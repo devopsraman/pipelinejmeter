@@ -23,7 +23,8 @@ pipeline {
 		   
 		   stage ('build jmeter container') {
 			  steps {
-				  sh ' /usr/local/bin/docker pull lazzurs/jmeter '
+				  //sh ' /usr/local/bin/docker pull lazzurs/jmeter '
+				  sh '/usr/local/bin/dockr ps'
 			  }
 		}
 		   
