@@ -3,7 +3,7 @@ pipeline {
 	   stages {
 	      stage ('Run jmeter scripts') {
 	          steps {
-	            sh' rm $WORKSPACE/pipelinejmeter/*.jtl '
+	           // sh' rm $WORKSPACE/pipelinejmeter/*.jtl '
     
                 sh' mkdir $WORKSPACE/pipelinejmeter/result '
                 sh'  cd "$WORKSPACE/pipelinejmeter" '
