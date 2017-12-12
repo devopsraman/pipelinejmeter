@@ -21,6 +21,12 @@ pipeline {
 		        }		   
 		   }
 		   
+		   stage ('build jmeter container"
+			  steps {
+				  sh ' docker pull lazzurs/jmeter '
+			  }
+		}
+		   
 		   
 	 }
 		   
