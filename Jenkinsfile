@@ -3,12 +3,12 @@ pipeline {
 	   stages {
 	      stage ('Run jmeter scripts') {
 	          steps {
-	            sh' rm $WORKSPACE/*.jtl '
+	            sh' rm $WORKSPACE/pipelinejmeter/*.jtl '
     
-                sh' mkdir $WORKSPACE/jmeter/result '
-                sh'  cd "$WORKSPACE/jmeter" '
+                sh' mkdir $WORKSPACE/pipelinejmeter/result '
+                sh'  cd "$WORKSPACE/pipelinejmeter" '
                    
-                 sh ' jmeter -n -t MVP1.0MaxLTV.v2.jmx -l $WORKSPACE/jmeter.jtl $WORKSPACE/jmeter/result '
+                 sh ' jmeter -n -t MVP1.0MaxLTV.v2.jmx -l $WORKSPACE/pipelinejmeter/jmeter.jtl $WORKSPACE/pipelinejmeter/result '
                    
                 }
 
