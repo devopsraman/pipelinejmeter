@@ -13,6 +13,15 @@ pipeline {
                 }
 
 	        }
-	    }
+		   stage ('publish report') {
+		   steps {
+			   perfReport compareBuildPrevious: true, excludeResponseTime: true, modePerformancePerTestCase: true, modeThroughput: true, sourceDataFiles: '$WORKSPACE/pipelinejmeter/*.jtl'
+	    
+		        }		   
+		   }
+		   
+		   
+	 }
+		   
 	   
-	}
+}
