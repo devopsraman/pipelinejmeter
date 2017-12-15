@@ -8,7 +8,7 @@ pipeline {
                 //sh' mkdir $WORKSPACE/pipelinejmeter/result '
                 sh'  cd "$WORKSPACE/pipelinejmeter" '
                    
-                sh ' /usr/local/bin/jmeter -n -t MVP1.0MaxLTV.v2.jmx -l $WORKSPACE/pipelinejmeter/jmeter1.jtl  '
+                sh ' /usr/local/bin/jmeter -n -t MVP1.0MaxLTV.v2.jmx -l $WORKSPACE/pipelinejmeter/jmeter11.jtl  '
 		//sh ' /usr/local/bin/jmeter -n -t MVP1.0MaxLTV.v2.jmx -l /usr/local/bin/jmeter.jtl  ' 
                    
                 }
