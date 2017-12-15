@@ -16,7 +16,7 @@ pipeline {
 	        }
 	     stage ('publish report') {
 		  steps {
-			  perfReport compareBuildPrevious: true, excludeResponseTime: true, modePerformancePerTestCase: true, modeThroughput: true, sourceDataFiles: '/usr/local/bin/*.jtl'
+			  perfReport compareBuildPrevious: true, excludeResponseTime: true, modePerformancePerTestCase: true, modeThroughput: true, sourceDataFiles: '/Users/rthall/.jenkins/workspace/pipelinejmeter/pipelinejmeter/*.jtl'
 	    
 		        }		   
 		    }
